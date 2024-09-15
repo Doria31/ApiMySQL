@@ -1,0 +1,20 @@
+Debemos installar el modulo mysql ques el driver de conección y el modulo express-myconnectión lo que nos dará algunos metodos que nos permitira a traves de express metodos y funciones que nos permitiran realizar consultas en nuestra db mysql
+
+npm i mysql express-myconnection
+
+
+El error ER_NOT_SUPPORTED_AUTH_MODE ocurre porque la versión de MySQL que estás utilizando está configurada con un protocolo de autenticación que no es compatible con el cliente MySQL que estás usando en tu aplicación Node.js.
+
+Ejecute la siguiente consulta en MYSQL Workbench
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+Donde rootcomo tu usuario localhostcomo tu URL y passwordcomo tu contraseña
+
+Luego ejecute esta consulta para actualizar los privilegios:
+
+flush privileges;
+
+Intente conectarse usando el nodo después de hacerlo.
+
+Si esto no funciona, pruébelo sin @'localhost'piezas.

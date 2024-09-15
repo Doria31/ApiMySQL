@@ -1,0 +1,31 @@
+###
+GET http://localhost:3000/api HTTP/1.1
+
+###
+POST http://localhost:3000/api HTTP/1.1
+Content-Type: application/json
+
+{
+    "nit": "1067161502",
+    "supplier": "Argos",
+    "date": "2024-10-01",
+    "product": "Argos x50",
+    "price": 33000,
+    "amount": 3
+}
+
+###
+PUT http://localhost:3000/api/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nit": "1067161502",
+    "supplier": "Argos",
+    "date": "2024-10-01",
+    "product": "Argos x50",
+    "price": 33000,
+    "amount": 2
+}
+
+###
+DELETE http://localhost:3000/api/1 HTTP/1.1
